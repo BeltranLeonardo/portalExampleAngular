@@ -1,0 +1,273 @@
+/* @font-face {
+  font-family: 'Oxygen';
+  src: url('2sDfZG1Wl4LcnbuKjk0m.woff2') format('woff2');
+  font-display: swap;
+} */
+
+:root {
+  --dark_palet_A: #1d1c1c;
+  --dark_palet_B: #222222;
+  --dark_palet_C: #101111;
+
+  --dark_leter_A: gray;
+  --dark_leter_B: #087dca; /*azul*/
+  --dark_leter_C: #dedcdc;
+}
+
+.main {
+  position: absolute;
+  width: calc(100% - 200px);
+  left: 200px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - 0px);
+  left: 0px;
+}
+
+.main .topbarV3 {
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  cursor: pointer;
+}
+
+  .toggle::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      line-height: 60px;
+      font-size: 24px;
+      text-align: center;
+      color: blue;
+  }
+
+.title {
+  position: relative;
+  width: 500px;
+  margin: 5px 5px;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: 'Outfit', sans-serif;
+  color: #0050aa;
+}
+
+
+.clientUser {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  color: #07215b;
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
+}
+
+.accessType {
+  position: relative;
+  height: 20px;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: #07215b;
+  text-align: right;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+
+.frameset2 {
+  width: 100%;
+  position: absolute;
+  height: 250%;
+  border: none;
+
+}
+
+/*  RESPONSIVE  */
+
+@media (max-width:1400px){
+
+  .title {
+      font-size: 22px;
+      font-family: 'Outfit', sans-serif;
+
+  }
+  .survey_container {
+      padding-top: 0;
+  }
+
+  .survey_text {
+      padding-top: -5px;
+      font-size: 12px;
+  }
+
+  .survey_btn {
+      max-height: 20px;
+      padding-top: 0;
+      font-size: 12px;
+  }
+}
+
+@media (max-width:992px) {
+  /*hacer posible el colapse*/
+  .title {
+      position: relative;
+      width: 100%;
+      margin: 5px 5px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 22px;
+      font-family: 'Outfit', sans-serif;
+      color: #0050aa;
+  }
+
+
+  .frameset2 {
+      height: 350%;
+  }
+
+
+  .main {
+      width: calc(100% - 170px);
+      left: 170px;
+  }
+
+
+  .toggle {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background: transparent;
+      cursor: pointer;
+  }
+
+      .toggle::before {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          line-height: 60px;
+          font-size: 24px;
+          text-align: center;
+          color: blue;
+      }
+
+      .survey_container {
+          padding-top: 0;
+      }
+
+      .survey_text {
+          padding-top: -5px;
+          font-size: 10px;
+      }
+
+      .survey_btn {
+          max-height: 20px;
+          padding-top: 0;
+          font-size: 10px;
+      }
+
+}
+
+@media (max-width:768px) {
+  /*hacer posible el colapse*/
+  .title {
+      position: relative;
+      width: 100%;
+      margin: 7px 7px;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 18px;
+      font-family: 'Outfit', sans-serif;
+      color: #0050aa;
+  }
+
+  .clientUser {
+      display: none;
+  }
+
+  .accessType {
+      display: none;
+  }
+
+  .frameset2 {
+      height: 400%;
+  }
+  .survey_container {
+      padding-top: 0;
+  }
+
+  .survey_text {
+      padding-top: -5px;
+      font-size: 10px;
+  }
+
+  .survey_btn {
+      max-height: 20px;
+      padding-top: 0;
+      font-size: 10px;
+  }
+
+}
+
+@media (max-width:480px) {
+  /*hacer posible el colapse*/
+  .title {
+      position: relative;
+      width: 100%;
+      margin: 7px 7px;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 14px;
+      font-family: 'Outfit', sans-serif;
+      color: #0050aa;
+  }
+
+  .clientUser {
+      display: none;
+  }
+
+  .accessType {
+      display: none;
+  }
+
+  .frameset2 {
+      height: 400%;
+  }
+  .survey_container {
+      padding-top:0;
+
+  }
+  .survey_text{
+      padding-top:-5px;
+      font-size:10px;
+  }
+  .survey_btn{
+      max-height:20px;
+      padding-top:0;
+      font-size:10px;
+  }
+
+}

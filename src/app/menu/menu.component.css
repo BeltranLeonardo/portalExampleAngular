@@ -1,0 +1,338 @@
+:root {
+  --dark_palet_A: #1d1c1c;
+  --dark_palet_B: #222222;
+  --dark_palet_C: #101111;
+  --dark_leter_A: white; /* #d5d3d3;*/
+  --dark_leter_B: #060e9f; /* #00143C;*/ /*azul  #004982;*/
+  --dark_leter_C: gray;
+
+}
+
+  .switch {
+  background: #343D5B;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  justify-content: space-between;
+}
+  .switch span {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      display: block;
+      background: none;
+      color: #FFF;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .switch::after {
+      content: "";
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      position: absolute;
+      background: #F1F1F1;
+      top: 0;
+      left: 0;
+      right: unset;
+      border-radius: 50%;
+      transition: .3s ease all;
+      box-shadow: 0 0 1.5px rgba(0,0,0,.5);
+  }
+  .switch.active {
+      background: orange;
+  }
+  .switch.active::after {
+          left: unset;
+          right: 0;
+      }
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  left: 0;
+  background: var(--dark_leter_B); /* dark:light */
+  height: 100%;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+  .sidebar .text { /*titulo*/
+      color: var(--dark_leter_A);
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 60px;
+      text-align: center;
+      background:var(--dark_leter_B); /* dark:light */
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+nav ul {
+  background: linear-gradient(#060e9f 30%, #2f7de1); /*var(--dark_leter_B);*/ /* dark:light */
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+  nav ul li {
+          line-height: 30px;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          text-decoration: none;
+      }
+  nav ul li a {
+              position: relative;
+              color: var(--dark_leter_A);
+              font-size: 16px;
+              padding-left: 16px;
+              font-weight: 500;
+              display: block;
+              width: 100%;
+              border-left: 3px solid transparent;
+          }
+  nav ul li a span {
+                  position: absolute;
+                  top: 30%;
+                  right: 30px;
+                  font-size: 14px;
+              }
+  nav ul li a:hover { /*hover submenu */ /* dark:light */
+                  color: white;
+                  background: var(--dark_leter_B);
+                  border-left-color: white;
+              }
+  nav ul ul {
+      position: static;
+      display: none;
+  }
+  nav ul ul li {
+          line-height: 30px;
+          border-bottom: none;
+      }
+  nav ul ul li a {
+              padding-top: -10px;
+              font-size: 14px;
+              color: #e6e6e6;
+              padding-left: 45px;
+              text-decoration: none;
+          }
+  nav ul .client_show.show {
+      display: block;
+  }
+  nav ul .cards_show.show {
+      display: block;
+  }
+  nav ul .reports_show.show {
+      display: block;
+  }
+  nav ul .payments_show.show {
+      display: block;
+  }
+  nav ul .comments_show.show {
+      display: block;
+  }
+
+
+
+.menu {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.submenu {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu_logo {
+  width: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+#div_logo {
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 0;
+}
+
+.subtitle {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-family: 'Outfit';
+  font-weight: 400;
+  /*background-color: black;*/
+}
+
+
+
+/*  RESPONSIVE  */
+
+
+
+  @media (max-width:1440px) {
+
+  .menu_logo {
+      width: 35px;
+      padding-top: 10px;
+      padding-bottom: 10px
+  }
+  #div_logo {
+      padding-top: 10px;
+      padding-right: 30px;
+      padding-bottom: 0;
+  }
+  .subtitle {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 20px;
+      font-family: 'Outfit';
+      font-weight: 400;
+  }
+
+  .sidebar {
+      width: 200px;
+  }
+      .sidebar .text {
+          font-size: 22px;
+          line-height: 60px;
+      }
+
+  /*MENU Parte superior */
+  .menu {
+      font-size: 14px;
+      font-weight: 600;
+  }
+  .submenu {
+      font-size: 12px;
+      font-weight: 600;
+  }
+
+  /*MENU Renglones */
+  nav ul li {
+      line-height: 28px; /*tamanio del renglon*/
+  }
+      nav ul li a {
+          font-size: 14px;
+          padding-left: 21px;
+      }
+          nav ul li a span {
+              top: 20%;
+              right: 20px;
+              font-size: 18px;
+          }
+
+  /*SUBMENU  Renglones */
+  nav ul ul li {
+      line-height: 28px; /*tamanio del renglon*/
+  }
+      nav ul ul li a {
+          padding-top: -10px;
+          font-size: 12px;
+          padding-left: 50px;
+      }
+}
+
+  @media (max-width:992px) {
+
+      #div_logo {
+          cursor: pointer;
+          padding-top: 4px;
+          padding-right: 20px;
+          padding-bottom: 0;
+      }
+
+      .subtitle {
+          padding-left: 10px;
+          font-size: 18px;
+      }
+
+      .sidebar {
+          width: 170px;
+      }
+
+          .sidebar .text {
+              font-size: 20px;
+              line-height: 40px;
+          }
+
+      #div_logo {
+          padding-top: 6px;
+          padding-right: 10px;
+      }
+
+
+
+      /*MENU Parte superior */
+      .menu {
+          font-size: 14px;
+          font-weight: 600;
+      }
+
+      .submenu {
+          font-size: 12px;
+          font-weight: 600;
+      }
+
+      .menu_logo {
+          width: 35px;
+          padding-top: 4px;
+          padding-bottom: 4px
+      }
+
+
+      /*MENU Renglones */
+      nav ul li {
+          line-height: 28px; /*tamanio del renglon*/
+      }
+
+          nav ul li a {
+              font-size: 14px;
+              padding-left: 21px;
+          }
+
+              nav ul li a span {
+                  top: 20%;
+                  right: 20px;
+                  font-size: 18px;
+              }
+
+
+      /*SUBMENU  Renglones */
+      nav ul ul li {
+          line-height: 28px; /*tamanio del renglon*/
+      }
+
+          nav ul ul li a {
+              padding-top: -10px;
+              font-size: 12px;
+              padding-left: 50px;
+          }    }
+
+  @media (max-width:480px) {
+      .subtitle {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 20px;
+          font-family: 'Outfit';
+          font-weight: 400;
+      }
+
+      .frameset2 {
+          height: 200%;
+          border: none;
+      }
+  }
+
+  @media (max-width: 360px) {
+      .frameset2 {
+          height: 300%;
+          border: none;
+      }
+  }

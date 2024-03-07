@@ -1,0 +1,52 @@
+<div class="back_image">
+  <form id="Form1" (ngSubmit)="doLogin()">
+
+    <div class="template">
+
+      <div class="container">
+        <div class="card">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" style="text-align: center; padding-bottom: 15px; padding-top: -10px; color: #087dca; font-size: 18px;">INICIAR SESIÓN</div>
+            <div class="col-1"></div>
+          </div>
+
+          <div class="info">
+            <div>
+              <input [(ngModel)]="clientNumber" name="txtUser" type="number" class="textbox_form" placeholder="NÚMERO DE CLIENTE" />
+            </div>
+            <br />
+            <div class="right-inner-addon">
+              <input [(ngModel)]="password" name="txtPass" type="password" class="textbox_form" placeholder="CONTRASEÑA" />
+            </div>
+            <div id="message" class="message">
+              <label>{{response}}</label>
+            </div>
+            <br />
+            <div>
+              <button type="submit" id="btn_ingresar" class="button_form">INGRESAR</button>
+              <br />
+            </div>
+            <br />
+          </div>
+          <a class="hplk_r">RECUPERAR MI CONTRASEÑA</a>
+        </div>
+        <br />
+      </div>
+    </div>
+
+  </form>
+
+  <footer>
+    <div class="row">
+      <div class="col footer_row_col">
+        <p>
+          PORTAL ADMINISTRACIÓN DE SALDOS &copy; 800 026 9442 <br />
+          Misión de San Javier #10643, Edificio VIA Corporativo<br /> Piso 10, Tijuana, B.C. 22010
+        </p>
+      </div>
+      <div class="col" style="text-align:center;"><img src="../assets/images/vLogotipo_Blanco.png" style="width:200px;margin-top:-20px;" /></div>
+    </div>
+  </footer>
+
+</div>

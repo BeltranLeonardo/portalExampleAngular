@@ -1,20 +1,20 @@
-<div class="bg-[url('./assets/images/PortalFact_BGLogin.jpg')] bg-center bg-cover bg-no-repeat h-full">
+<div class="bg-[url('./assets/images/PortalFact_BGLogin.jpg')] bg-cover bg-no-repeat h-full bg-top">
   <form id="Form1" (ngSubmit)="doLogin()">
 
     <div class="m-auto flex">
-      <div class="container relative w-full grid grid-cols-1 px-[25%] pt-[5%] pb-[10%]">
+      <div class="container relative w-full grid grid-cols-1 px-[30%] pt-[5%] pb-[10%] mx-auto">
 
-          <div class="bg-white p-8 w-full rounded relative text-center">
-            <div class="flex flex-wrap mx-[-15px]">
-              <div class="ml-[40%] text-center py-0 text-lg font-sans text-blue-700 font-bold">INICIAR SESIÓN</div>
+          <div class="bg-white p-8 px-16 w-full rounded relative text-center shadow-lg">
+            <div class="mx-[-15px]">
+              <div class="text-center py-0 text-lg font-sans text-blue-700 font-bold">INICIAR SESIÓN</div>
             </div>
             <br>
             <div>
-              <input [(ngModel)]="clientNumber" name="txtUser" type="number" placeholder="NÚMERO DE CLIENTE" class="w-full block py-2 px-[30px] rounded-sm border-solid border-[#b5b5b5] font-light text-sm text-center bg-gray-50 outline-none"/>
+              <input [(ngModel)]="clientNumber" name="txtUser" type="number" placeholder="número de cliente" class="w-full block py-0.5 px-[30px] rounded-sm border-1 border-solid border-[#b5b5b5] text-center font-light text-base outline-none"/>
             </div>
             <br>
             <div>
-              <input [(ngModel)]="password" name="txtPass" type="password" placeholder="CONTRASEÑA" class="w-full block py-2 px-[30px] rounded-sm border-solid border-[#b5b5b5] font-light text-sm text-center outline-none bg-gray-50"/>
+              <input [(ngModel)]="password" name="txtPass" type="password" placeholder="contraseña" class="w-full block py-0.5 px-[30px] rounded-sm border-1 border-solid border-[#b5b5b5] text-center font-light text-base outline-none"/>
             </div>
             <div id="message" class="">
               <label>{{response}}</label>
@@ -27,23 +27,22 @@
             <a class="text-sm text-blue-600 font-bold cursor-pointer">RECUPERAR MI CONTRASEÑA</a>
           </div>
 
-
-
       </div>
     </div>
-
   </form>
 
-  <!-- <footer>
-    <div class="row">
-      <div class="col footer_row_col">
-        <p>
+  <footer class="fixed bottom-0 left-0 w-full h-24 bg-gradient-to-r from-[#060e9f] to-blue-500">
+    <div class="-ml-3.5 columns-2">
+      <div class="pt-4 pl-12 text-left">
+        <p class="text-xs font-normal px-2.5 text-white font-sans">
           PORTAL ADMINISTRACIÓN DE SALDOS &copy; 800 026 9442 <br />
           Misión de San Javier #10643, Edificio VIA Corporativo<br /> Piso 10, Tijuana, B.C. 22010
         </p>
       </div>
-      <div class="col" style="text-align:center;"><img src="../assets/images/vLogotipo_Blanco.png" style="width:200px;margin-top:-20px;" /></div>
+      <div class="text-center pt-1.5 -ml-20">
+        <img src="../../assets/images/vLogotipo_Blanco.png" class="w-[200px] -mt-5"/>
+      </div>
     </div>
-  </footer> -->
+  </footer>
 
 </div>

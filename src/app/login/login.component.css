@@ -1,10 +1,4 @@
-:host {
-  /*max-width: 1280px;
-  padding: 2rem;
-  text-align: center;*/
-}
-
-.back_image {
+/* .back_image {
 background-image: url('../../assets/images/PortalFact_BGLogin.jpg');
 background-size: cover;
 background-repeat: no-repeat;
@@ -34,6 +28,13 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
 text-align: center;
 }
 
+/* Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 footer {
 position: fixed;
 bottom: 0px;
@@ -56,4 +57,4 @@ font-weight: 400;
 padding-left: 10px;
 padding-right: 10px;
 }
-
+ */

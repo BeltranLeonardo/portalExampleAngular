@@ -1,9 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0;
+    @apply h-screen;
+    @apply bg-no-repeat;
+    @apply bg-cover;
+    @apply relative;
+    @apply overflow-hidden;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+/* @import "../node_modules/bootstrap/dist/css/bootstrap.css"; */
 
 
-body {
+
+
+/* body {
     margin: 0;
     height: 100vh;
     background-repeat: no-repeat;
@@ -12,12 +34,12 @@ body {
     position: relative;
     overflow-y: hidden;
   }
-  
+
   .template {
     margin: auto;
     display: flex;
   }
-  
+
   .container {
     position: relative;
     width: 100%;
@@ -29,7 +51,7 @@ body {
     padding-bottom: 10%;
     border: none;
   }
-  
+
   .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,9 +61,9 @@ body {
     margin-right: -15px;
     margin-left: -15px;
   }
-  
+
   .textbox_form {
-    vertical-align: middle;
+    /* vertical-align: middle;
     width: 100%;
     display: block;
     padding-top: 2px;
@@ -53,7 +75,7 @@ body {
     font-weight: 300;
     line-height: 20px;
   }
-  
+
   .button_form {
     max-width: 100%;
     width: 100%;
@@ -68,4 +90,4 @@ body {
     font-size: 15px;
     font-weight: 300;
     outline: none;
-  }
+  } */

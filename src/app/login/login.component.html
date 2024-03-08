@@ -1,43 +1,40 @@
-<div class="back_image">
+<div class="bg-[url('./assets/images/PortalFact_BGLogin.jpg')] bg-center bg-cover bg-no-repeat h-full">
   <form id="Form1" (ngSubmit)="doLogin()">
 
-    <div class="template">
+    <div class="m-auto flex">
+      <div class="container relative w-full grid grid-cols-1 px-[25%] pt-[5%] pb-[10%]">
 
-      <div class="container">
-        <div class="card">
-          <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10" style="text-align: center; padding-bottom: 15px; padding-top: -10px; color: #087dca; font-size: 18px;">INICIAR SESIÓN</div>
-            <div class="col-1"></div>
-          </div>
-
-          <div class="info">
+          <div class="bg-white p-8 w-full rounded relative text-center">
+            <div class="flex flex-wrap mx-[-15px]">
+              <div class="ml-[40%] text-center py-0 text-lg font-sans text-blue-700 font-bold">INICIAR SESIÓN</div>
+            </div>
+            <br>
             <div>
-              <input [(ngModel)]="clientNumber" name="txtUser" type="number" class="textbox_form" placeholder="NÚMERO DE CLIENTE" />
+              <input [(ngModel)]="clientNumber" name="txtUser" type="number" placeholder="NÚMERO DE CLIENTE" class="w-full block py-2 px-[30px] rounded-sm border-solid border-[#b5b5b5] font-light text-sm text-center bg-gray-50 outline-none"/>
             </div>
-            <br />
-            <div class="right-inner-addon">
-              <input [(ngModel)]="password" name="txtPass" type="password" class="textbox_form" placeholder="CONTRASEÑA" />
+            <br>
+            <div>
+              <input [(ngModel)]="password" name="txtPass" type="password" placeholder="CONTRASEÑA" class="w-full block py-2 px-[30px] rounded-sm border-solid border-[#b5b5b5] font-light text-sm text-center outline-none bg-gray-50"/>
             </div>
-            <div id="message" class="message">
+            <div id="message" class="">
               <label>{{response}}</label>
             </div>
-            <br />
+            <br>
             <div>
-              <button type="submit" id="btn_ingresar" class="button_form">INGRESAR</button>
-              <br />
+              <button type="submit" id="btn_ingresar" class="max-w-full w-full bg-blue-800 rounded outline-none p-1 cursor-pointer text-center text-white text-base">INGRESAR</button>
             </div>
-            <br />
+            <br>
+            <a class="text-sm text-blue-600 font-bold cursor-pointer">RECUPERAR MI CONTRASEÑA</a>
           </div>
-          <a class="hplk_r">RECUPERAR MI CONTRASEÑA</a>
-        </div>
-        <br />
+
+
+
       </div>
     </div>
 
   </form>
 
-  <footer>
+  <!-- <footer>
     <div class="row">
       <div class="col footer_row_col">
         <p>
@@ -47,6 +44,6 @@
       </div>
       <div class="col" style="text-align:center;"><img src="../assets/images/vLogotipo_Blanco.png" style="width:200px;margin-top:-20px;" /></div>
     </div>
-  </footer>
+  </footer> -->
 
 </div>

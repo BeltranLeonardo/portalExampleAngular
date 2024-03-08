@@ -22,21 +22,21 @@ export class LoginComponent {
   response : string;
 
   doLogin() {
-    this.service.login(this.clientNumber, this.password).subscribe({
-      next: (resp: any) => {
-        console.log(resp);
-        if (resp != 0){
+    // this.service.login(this.clientNumber, this.password).subscribe({
+    //   next: (resp: any) => {
+    //     console.log(resp);
+    //     if (resp != 0){
           this.router.navigate(['/master'])
-        }
+    //     }
 
-        else
-          this.response  = "Usuario o Contraseña invalidos.";
-      },
-      error(err) {
-        console.log(err.error);
-        // this.response = "error en la api";
-      },
-    });
+    //     else
+    //       this.response  = "Usuario o Contraseña invalidos.";
+    //   },
+    //   error(err) {
+    //     console.log(err.error);
+    //     // this.response = "error en la api";
+    //   },
+    // });
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faDollarSign, faQrcode, faFileInvoiceDollar, faCommentAlt, faUnlock, faPowerOff } from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign, faQrcode, faFileInvoiceDollar, faCommentAlt, faUnlock, faPowerOff, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +15,7 @@ export class MenuComponent {
    *
    */
   constructor(library: FaIconLibrary) {
-    library.addIcons(faDollarSign, faQrcode, faFileInvoiceDollar, faCommentAlt, faUnlock, faPowerOff);
+    library.addIcons(faDollarSign, faQrcode, faFileInvoiceDollar, faCommentAlt, faUnlock, faPowerOff, faBars);
 
   }
 }

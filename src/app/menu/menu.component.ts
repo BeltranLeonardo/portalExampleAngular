@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// '@fontawesome/angular-font'
 import { faDollarSign, faQrcode, faFileInvoiceDollar, faCommentAlt, faUnlock, faPowerOff, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

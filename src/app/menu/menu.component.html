@@ -1,16 +1,17 @@
  <!-- drawer component -->
 <div class="columns-2">
 
+  <!-- Menu desplegable -->
   <div id="drawer-navigation"
-    class="fixed top-0 left-0 z-40 w-60 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-gradient-to-b from-blue-800 to-blue-700 dark:bg-gray-800"
+    class="fixed top-0 left-0 z-40 w-60 h-full p-4 overflow-y-auto overflow-x-clip transition-transform duration-300 -translate-x-full bg-gradient-to-b from-blue-800 to-blue-700 dark:bg-gray-800"
     tabindex="-1" aria-labelledby="drawer-navigation-label">
-    <fa-icon icon="bars" class="text-white  text-2xl -ml-3 -mt-3 flex" type="button"
+    <fa-icon icon="bars" class="text-white  text-lg -ml-3 -mt-3 flex" type="button"
     data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"></fa-icon>
-    <img src="../../assets/images/vLogotipo_Blanco.png" class="w-[200px] py-2.5 mt-[-50px] ml-2.5" />
+    <img src="../../assets/images/vLogotipo_Blanco.png" class="w-[200px] py-2.5 mt-[-50px]" />
     <div class="-mt-3 overflow-y-auto overflow-x-clip">
       <ul class="space-y-2 font-medium">
         <li>
-          <a class="a-text">
+          <a [routerLink]="['/master/saldo']" routerLinkActive="router-link-active" class="a-text" data-drawer-hide="drawer-navigation">
             <fa-icon icon="dollar-sign">&nbsp; &nbsp;</fa-icon>
             <span class="ms-2">Consultar Saldo</span>
           </a>
@@ -22,7 +23,7 @@
           </a>
         </li>
         <li>
-          <a class="a-text">
+          <a [routerLink]="['/master/invoices']" routerLinkActive="router-link-active" class="a-text" data-drawer-hide="drawer-navigation">
             <fa-icon icon="file-invoice-dollar">&nbsp;&nbsp;</fa-icon>
             <span class="flex-1 ms-2 whitespace-nowrap">Facturas Anticipo</span>
           </a>
@@ -49,37 +50,48 @@
     </div>
   </div>
 
-  <div class="fixed h-screen px-2 bg-gradient-to-b from-blue-800 to-blue-700 grid-cols-2">
-    <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-      <fa-icon icon="bars" class="text-white text-3xl flex "
+  <!-- Mini Menu -->
+  <div  class="fixed h-full px-2 bg-gradient-to-b from-blue-800 to-blue-700 grid-cols-2">
+    <div  class="p-1 mt-2 hover:bg-blue-700 rounded-lg">
+      <fa-icon icon="bars" class="text-white text-lg flex "
       type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
       aria-controls="drawer-navigation"></fa-icon>
     </div>
 
-    <div class="mt-4 grid grid-rows-7 gap-3">
-      <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-        <fa-icon icon="dollar-sign" class="pl-1 text-white text-3xl flex">&nbsp; &nbsp;</fa-icon>
+    <div class="mt-4 grid grid-rows-6 gap-3">
+      <div class="p-1 hover:bg-blue-700 rounded-lg">
+        <a [routerLink]="['/master/saldo']" routerLinkActive="router-link-active">
+          <fa-icon icon="dollar-sign" class="ml-[2px] text-white text-lg flex"></fa-icon>
+        </a>
       </div>
 
-      <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-        <fa-icon icon="qrcode" class="pl-1 text-white text-3xl flex">&nbsp; &nbsp;</fa-icon>
+      <div class="p-1 hover:bg-blue-700 rounded-lg">
+        <a>
+          <fa-icon icon="qrcode" class="mt-[2px] text-white text-lg flex"></fa-icon>
+        </a>
       </div>
 
-      <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-        <fa-icon icon="file-invoice-dollar" class="pl-1 text-white text-3xl flex">&nbsp; &nbsp;</fa-icon>
+      <div class="p-1 hover:bg-blue-700 rounded-lg">
+        <a [routerLink]="['/master/invoices']" routerLinkActive="router-link-active">
+          <fa-icon icon="file-invoice-dollar" class="mt-[2px] text-white text-lg flex"></fa-icon>
+        </a>
       </div>
 
-      <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-        <fa-icon icon="comment-alt" class="pl-1 text-white text-2xl flex">&nbsp; &nbsp;</fa-icon>
+      <div class="p-1 hover:bg-blue-700 rounded-lg">
+        <a>
+          <fa-icon icon="comment-alt" class="mt-[4px] text-white text-lg flex"></fa-icon>
+        </a>
       </div>
 
-      <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-        <fa-icon icon="unlock" class="pl-1 text-white text-3xl flex">&nbsp; &nbsp;</fa-icon>
+      <div class="p-1 hover:bg-blue-700 rounded-lg">
+        <a>
+          <fa-icon icon="unlock" class="text-white text-lg flex"></fa-icon>
+        </a>
       </div>
 
-      <div class="p-1 mt-1 hover:bg-blue-700 rounded-md">
-        <a [routerLink]="['/login']" routerLinkActive="router-link-active" data-drawer-hide="drawer-navigation">
-          <fa-icon icon="power-off" class="pl-1 text-white text-3xl flex">&nbsp; &nbsp;</fa-icon>
+      <div class="p-1 hover:bg-blue-700 rounded-lg">
+        <a [routerLink]="['/login']" routerLinkActive="router-link-active">
+          <fa-icon icon="power-off" class="mt-[2px] text-white text-lg flex"></fa-icon>
         </a>
       </div>
     </div>

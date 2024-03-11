@@ -1,12 +1,33 @@
 <div class="relative w-full">
+  <!-- Sidebar -->
   <app-menu></app-menu>
 
-  <div class="absolute left-12 min-h-screen bg-[#f5f5f5] transition w-full">
-    <div class="w-full bg-white h-[60px] py-0 pl-2.5 flex justify-between items-center">
-      <p>master header</p>
+  <!-- Main -->
+  <div class="absolute left-12 min-h-screen bg-[#f5f5f5] transition w-[calc(100%-3rem)]">
+    <!-- Header -->
+    <div class="w-full bg-white h-[60px] py-0 px-2.5 flex justify-between items-center">
+      <div></div>
+
+      <div class="relative w-[500px] m-1">
+        <p class="text-3xl text-center text-blue-900 font-semibold cursor-pointer">Portal Enerser</p>
+      </div>
+
+      <div class="p-2 grid grid-cols-3 text-xs text-blue-900 bg-[#f5f5f5] rounded-xl cursor-pointer">
+        <div class=" text-center">
+          <fa-icon icon="circle-user" class="px-1 align-middle text-xl text-gray-600"></fa-icon>
+        </div>
+        <div class="col-span-2">
+          <p class="font-bold">Username</p>
+          <p>ClientType</p>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Content -->
+    <div class="p-10">
+      <router-outlet></router-outlet>
+    </div>
+
   </div>
-
-
 </div>
-<!-- <router-outlet></router-outlet> -->

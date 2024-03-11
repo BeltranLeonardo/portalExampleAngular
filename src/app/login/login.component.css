@@ -6,7 +6,7 @@
     @apply w-full;
     @apply block;
     @apply py-0.5 px-[30px];
-    @apply rounded-sm border-[1px] border-solid border-[#b5b5b5];
+    @apply rounded-lg border-[1px] border-solid border-[#b5b5b5];
     @apply font-light text-base text-center;
     @apply outline-none;
   }

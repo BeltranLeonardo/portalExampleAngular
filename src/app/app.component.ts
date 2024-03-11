@@ -1,7 +1,5 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, PLATFORM_ID, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +9,6 @@ import { initFlowbite } from 'flowbite';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  /**
-   *
-   */
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      initFlowbite();
-    }
-  }
+
+  constructor() {}
 }

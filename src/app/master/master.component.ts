@@ -7,6 +7,7 @@ import { initFlowbite } from 'flowbite';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUser, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { SaldoComponent } from '../saldo/saldo.component';
+import 'flowbite';
 
 @Component({
   selector: 'app-master',

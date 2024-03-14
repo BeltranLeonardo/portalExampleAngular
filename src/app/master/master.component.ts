@@ -18,14 +18,8 @@ import 'flowbite';
 })
 export class MasterComponent {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, library: FaIconLibrary) {
+  constructor(library: FaIconLibrary) {
     library.addIcons(faUser, faCircleUser);
-  }
-
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      initFlowbite();
-    }
   }
 
 }

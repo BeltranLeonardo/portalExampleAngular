@@ -16,6 +16,7 @@ export const routes: Routes = [
       { path: '', component: SaldoComponent },
     ],
   },
+  { path: 'invoices', component: InvoicesComponent },
 ];
 
 // @NgModule({

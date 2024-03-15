@@ -1,28 +1,25 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { initFlowbite } from 'flowbite';
-
+import { faMagnifyingGlass, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { NgbDatepickerModule, NgbDateAdapter, NgbDateStruct, NgbDatepicker, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-invoices',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, NgbDatepickerModule, FormsModule, JsonPipe, NgbDatepicker],
   templateUrl: './invoices.component.html',
-  styleUrl: './invoices.component.css'
+  styleUrl: './invoices.component.css',
 })
 
 export class InvoicesComponent {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, library: FaIconLibrary) {
-    library.addIcons(faMagnifyingGlass);
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faMagnifyingGlass, faCalendar);
   }
 
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      initFlowbite();
-    }
-  }
+  model: string;
+  model2: string;
 
 }

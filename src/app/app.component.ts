@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { initFlowbite } from 'flowbite';
-import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +8,8 @@ import { OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  constructor(private readonly router: Router) {
-    this.router.events.subscribe(()=> {
-      initFlowbite();
-    });
-  }
-
-  ngOnInit(): void {
-      initFlowbite();
-  }
+  constructor(private readonly router: Router) { }
 
 }

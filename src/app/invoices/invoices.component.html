@@ -1,5 +1,5 @@
 <form id="Form1">
-  <div class="absolute w-[calc(100%-3rem)] grid grid-rows-2 gap-4">
+  <div class="absolute w-[calc(100%-3rem)] grid grid-rows-[max-content_1fr] gap-4">
 
     <!--searchBox -->
     <div class="bg-white p-3 rounded-md relative">
@@ -55,7 +55,30 @@
       </div>
 
       <div>
+        <table class="table-auto w-full text-sm text-left rtl:text-right text-gray-700 border">
+          <thead class="text-xs text-gray-700 uppercase border-b">
+            <tr>
+              <th scope="col" class="px-6 py-3 "> Song </th>
+              <th scope="col" class="px-6 py-3 "> Artist </th>
+              <th scope="col" class="px-6 py-3 "> Year </th>
+            </tr>
 
+          </thead>
+          <tbody>
+            @for (c of customerArray; track c) {
+              <tr class="bg-white border-b">
+                <td class="px-6 py-4">{{ c.song }}</td>
+                <td class="px-6 py-4">{{ c.artist }}</td>
+                <td class="px-6 py-4">{{ c.year }}</td>
+              </tr>
+            }
+            @empty {
+              <tr class="bg-white border-b">
+                <td class="px-6 py-4">No se encontraron registros.</td>
+              </tr>
+            }
+          </tbody>
+        </table>
       </div>
 
     </div>
